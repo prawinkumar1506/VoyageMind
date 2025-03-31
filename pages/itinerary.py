@@ -9,9 +9,9 @@ import re
 from datetime import datetime, timedelta, date
 
 # API KEYS
-SERP_API_KEY = "89c1882e47a23096fd4cbe75c4212ddce818dfc57b4f08b609d0bcbffec790f8"
-GEMINI_API_KEY = "AIzaSyC5p-7VyB6ZDAE_-8v-lelkYPkv42dUtoU"
+GEMINI_API_KEY = st.secrets["api_keys"]["GEMINI_API_KEY"]
 
+SERP_API_KEY = st.secrets["api_keys"]["SERP_API_KEY"]
 genai.configure(api_key=GEMINI_API_KEY)
 model = genai.GenerativeModel("gemini-1.5-pro-latest")
 
