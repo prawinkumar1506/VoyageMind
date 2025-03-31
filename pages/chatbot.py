@@ -13,8 +13,13 @@ st.set_page_config(
     initial_sidebar_state="collapsed"
 )
 
+# Load API keys from Streamlit secrets
+GEMINI_API_KEY = st.secrets["api_keys"]["GEMINI_API_KEY"]
+
+
+
 # Configure Gemini
-genai.configure(api_key="AIzaSyC5p-7VyB6ZDAE_-8v-lelkYPkv42dUtoU")
+genai.configure(api_key=GEMINI_API_KEY)
 model = genai.GenerativeModel("gemini-1.5-pro-latest")
 
 # Custom CSS
