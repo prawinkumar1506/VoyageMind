@@ -1,0 +1,8 @@
+streamlit
+google-generativeai
+requests
+fpdf
+pillow
+langchain
+streamlit-extras
+
